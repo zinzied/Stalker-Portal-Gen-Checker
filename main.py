@@ -7,8 +7,8 @@ import random
 import cryptography.hazmat.bindings.openssl
 from PyQt5 import QtWidgets, QtGui, QtCore
 import threading
-
 cryptography.hazmat.bindings.openssl.CRYPTOGRAPHY_OPENSSL_300_OR_GREATER = True
+from PyQt5.QtCore import QMetaType as qRegisterMetaType 
 
 with open('agents.txt', 'r') as f:
     user_agents = [line.strip() for line in f]
@@ -72,10 +72,17 @@ class StalkerPortalApp(QtWidgets.QWidget):
 
         self.setLayout(layout)
 
+        # Print the selected user agent when the application starts
+        self.print_user_agent()
+
     def print_colored(self, text: str, color: str) -> None:
         self.output_text.setTextColor(QtGui.QColor(color))
         self.output_text.append(text)
         self.output_text.moveCursor(QtGui.QTextCursor.End)
+
+    def print_user_agent(self):
+        user_agent = get_random_user_agent()
+        self.print_colored(f"Selected user agent: {user_agent}", "blue")
 
     def start_process(self):
         base_url = self.url_entry.text().strip()

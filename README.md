@@ -37,7 +37,7 @@ This Python application is a Stalker Portal MAC address generator and checker. I
 
 1. Run the application:
     ```sh
-    python stalker_portal_mac_checker.py
+    python main.py
     ```
 
 2. Enter the Stalker Portal URL with port in the "Enter Stalker Portal with Port" field.

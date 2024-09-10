@@ -56,6 +56,7 @@ This Python application is a Stalker Portal MAC address generator and checker. I
 2. Enter `00:1A:79:XX:XX:XX` in the "Enter a full MAC address to start from" field.
 3. Click "Start" to begin checking MAC addresses.
 4. The results will be displayed in the text area and saved to a file named `example.com_YYYY-MM-DD_HH-MM-SS.txt`.
+5. For educational purpose the usage is on own risk
 ### Donations
 If you feel like showing your love and/or appreciation for this project, then how about shouting me a coffee or Milk :)
 

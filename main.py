@@ -70,6 +70,16 @@ class StalkerPortalApp(QtWidgets.QWidget):
         self.output_text.setReadOnly(True)
         layout.addWidget(self.output_text)
 
+        # Developer information
+        developer_info = """
+        <p>This app developed by Zied Boughdir 2024.</p>
+        <p>GitHub link: <a href='https://github.com/zinzied'>https://github.com/zinzied</a></p>
+        """
+        self.developer_label = QtWidgets.QLabel()
+        self.developer_label.setTextFormat(QtCore.Qt.RichText)
+        self.developer_label.setText(developer_info)
+        layout.addWidget(self.developer_label)
+
         self.setLayout(layout)
 
         # Print the selected user agent when the application starts
